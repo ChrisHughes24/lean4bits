@@ -58,6 +58,6 @@
   {"git":
    {"url": "https://github.com/ChrisHughes24/mathlib4",
     "subDir?": null,
-    "rev": "82755937c4bafa0a67e9340c4eabf95f8d99ac01",
+    "rev": "eaad349bb78f9bfef707c4945c6b93d4686da085",
     "name": "Mathlib",
     "inputRev?": "computable-pi"}}]}
