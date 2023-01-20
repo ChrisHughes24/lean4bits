@@ -897,7 +897,6 @@ lemma propagate_eq_zero_iff (init_carry : α → Bool)
     rcases exists_repeat init_carry next_bit seq i with ⟨j, hj, seq2, hseq2⟩
     rw [← hseq2, h seq2 j hj, zeroSeq] }
 
-
 lemma eq_iff_xorSeq_eq_zero (seq₁ seq₂ : ℕ → Bool) :
     (∀ i, seq₁ i = seq₂ i) ↔ (∀ i, xorSeq seq₁ seq₂ i = zeroSeq i) := by
   simp [Function.funext_iff, xorSeq, zeroSeq]
