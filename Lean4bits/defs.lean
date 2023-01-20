@@ -53,7 +53,7 @@ def subSeqAux (x y : Nat → Bool) : Nat → Bool × Bool
     let borrow := (subSeqAux x y n).2
     let a := x (n + 1)
     let b := y (n + 1)
-    (_root_.xor a (_root_.xor b borrow), !(a && b) || ((!(_root_.xor a b)) && borrow))
+    (_root_.xor a (_root_.xor b borrow), !a && b || ((!(_root_.xor a b)) && borrow))
 
 def subSeq (x y : Nat → Bool) : Nat → Bool :=
   fun n => (subSeqAux x y n).1
