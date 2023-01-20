@@ -3,7 +3,7 @@ import Mathlib.Data.Bool.Basic
 inductive Term : Type
 | var : Nat → Term
 | zero : Term
-| neg_one : Term
+| negOne : Term
 | one : Term
 | and : Term → Term → Term
 | or : Term → Term → Term
@@ -92,7 +92,7 @@ def Term.eval : ∀ (_ : Term) (_ : Nat → Nat → Bool), Nat → Bool
 | var n, vars => vars n
 | zero, _ => zeroSeq
 | one, _ => oneSeq
-| neg_one, _ => negOneSeq
+| negOne, _ => negOneSeq
 | and t₁ t₂, vars => andSeq (Term.eval t₁ vars) (Term.eval t₂ vars)
 | or t₁ t₂, vars => orSeq (Term.eval t₁ vars) (Term.eval t₂ vars)
 | xor t₁ t₂, vars => xorSeq (Term.eval t₁ vars) (Term.eval t₂ vars)
