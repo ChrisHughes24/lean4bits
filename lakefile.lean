@@ -1,7 +1,7 @@
 import Lake
 open Lake DSL
 
-require Mathlib from git "https://github.com/ChrisHughes24/mathlib4" @ "computable-pi"
+require Mathlib from git "https://github.com/leanprover-community/mathlib4" @ "master"
 
 package lean4bits {
   -- add package configuration options here

@@ -1,7 +1,7 @@
 import Mathlib.Data.Fintype.Card
 import Mathlib.Data.Fintype.Sum
 import Mathlib.Data.Fintype.Sigma
-import Mathlib.Data.Fintype.Pi
+import Mathlib.Data.Fintype.BigOperators
 import Lean4bits.defs
 import Mathlib.Tactic.Zify
 import Mathlib.Tactic.Ring
@@ -729,8 +729,7 @@ lemma exists_repeat_carry (seq : β → ℕ → Bool) :
   push_neg at h
   have := λ a b hab => (le_antisymm (h a b hab) (h b a hab.symm)).symm
   have := Fintype.card_le_of_injective _ this
-  rw [card_fin] at this
-  admit
+  simp at this
 
 lemma propagateCarry2_eq_of_seq_eq_lt (seq₁ seq₂ : β → ℕ → Bool)
     (init_carry : α → Bool)
